@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Add jsPDF -->
+</head>
+<body>
+    <a href="login.html"></a>
+    <h1 class="title">Welcome to MakeMyResume</h1>
+    <br>
+    <br>
+    <div class="container">
+        <h1 class="res1">Resume Builder</h1>
+        <form id="resumeForm">
+            <h2 class="res2">Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="about">About You:</label>
+            <textarea id="about" name="about" required></textarea>
+
+            <h2> <b>Work Experience </b></h2>
+            <label for="company">Last Job Company:</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="jobDuration">Job Duration:</label>
+            <input type="text" id="jobDuration" name="jobDuration" required>
+
+            <h2>Achievements</h2>
+            <label for="achievements">Achievements:</label>
+            <textarea id="achievements" name="achievements" required></textarea>
+
+            <h2>Education</h2>
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <button  class="generate" type="submit">Generate Resume</button>
+        </form>
+
+        <div id="resumeDisplay" class="resume-display"></div>
+    </div>
+    <div class="lastdiv">
+        <h1>Follow my Socials:</h1>
+        <div class="social">
+            <a href="https://www.instagram.com/saran_222007/?hl=en"> <img src="https://freelogopng.com/images/all_img/1658588801instagram-icon-png.png " class="imgage" width="50px" target="_blank" alt=""></a>
+            <a href="https://www.linkedin.com/in/saranjeet-singh-64283530b/"> <img src="https://vectorified.com/images/white-linkedin-icon-4.png" class="imgage"width="50px" target="_blank" alt=""></a>
+            <a href="https://github.com/Saran-227"> <img src="https://icon-library.com/images/github-icon-white/github-icon-white-0.jpg " class="imgage"width="50px" target="_blank" alt=""></a>
+            <a href="https://x.com/saranjeet27?s=21"> <img src="https://static.vecteezy.com/system/resources/thumbnails/027/395/710/small_2x/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png" class="imgage" width="50px" target="_blank" alt=""></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

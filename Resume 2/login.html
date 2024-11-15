@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url(https://cdn.wallpapersafari.com/43/63/LKarBS.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(242, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -170px;
+}
+
+.form-container {
+    background-image: url(http://www.exceptnothing.com/wp-content/uploads/2011/12/colorPulse_V4.jpg);
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 20px 20px 20px black;
+    position: relative;
+    top: 140px;
+    right: 80px;
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+
+}
+.login {
+    color: white;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.toggle-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.toggle-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+.btn2 {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.logo {
+    position: relative;
+    width: 100px;
+    right: 450px;
+    bottom: -20px;
+    border-radius: 17px;
+    box-shadow: rgb(248, 255, 248) 0 0 10px;
+}
+.head {
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: -250px;
+    text-align: center;
+}
+.input-group {
+    position: relative;
+    width: 300px;
+}
+.login-email {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: black;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input:focus + .login-email {
+    top: -10px;
+    color: black;
+    background-color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="head"> <b>Welcome! </b></h1>
+    </div>
+    <div>
+        <img class="logo" src="resume logo.png"  alt="">
+    
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+            <h2 class="login">Login :)</h2>
+            <form action="#">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn"> <a href="index.html" class="btn2">Login</a></button> 
+                <p class="toggle-text">Don't have an account? <a href="#signup-form" onclick="toggleForm()">Sign Up</a></p>
+            </form>
+        </div>
+        
+        <!-- Signup Form -->
+        <div class="form-container hidden" id="signup-form">
+            <h2>Sign Up</h2>
+            <form action="#">
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn"> <a href="index.html">Sign Up</a></button>
+                <p class="toggle-text">Already have an account? <a href="#login-form" onclick="toggleForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            document.getElementById("login-form").classList.toggle("hidden");
+            document.getElementById("signup-form").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
